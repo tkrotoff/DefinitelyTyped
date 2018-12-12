@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "jsx": "react",
         "module": "commonjs",
         "lib": [
             "es6",
@@ -20,6 +21,6 @@
     "files": [
         "index.d.ts",
         "shallow/index.d.ts",
-        "react-test-renderer-tests.ts"
+        "react-test-renderer-tests.tsx"
     ]
 }

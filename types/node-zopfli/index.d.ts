@@ -19,21 +19,22 @@ declare class Zopfli extends Transform {
     static deflateSync(options?: Zopfli.Options): Buffer;
     static zlibSync(options?: Zopfli.Options): Buffer;
 
-    static deflate(input: Buffer, options: Zopfli.Options, cb: (err: Error, out: Buffer) => void): void;
-    static deflate(input: Buffer, cb: (err: Error, out: Buffer) => void): void;
+    static deflate(input: Buffer, options: Zopfli.Options, callback: (err: Error, out: Buffer) => void): void;
+    static deflate(input: Buffer, callback: (err: Error, out: Buffer) => void): void;
     static deflate(input: Buffer, options?: Zopfli.Options): Promise<Buffer>;
 
-    static gzip(input: Buffer, options: Zopfli.Options, cb: (err: Error, out: Buffer) => void): void;
-    static gzip(input: Buffer, cb: (err: Error, out: Buffer) => void): void;
+    static gzip(input: Buffer, options: Zopfli.Options, callback: (err: Error, out: Buffer) => void): void;
+    static gzip(input: Buffer, callback: (err: Error, out: Buffer) => void): void;
     static gzip(input: Buffer, options?: Zopfli.Options): Promise<Buffer>;
 
-    static zlib(input: Buffer, options: Zopfli.Options, cb: (err: Error, out: Buffer) => void): void;
-    static zlib(input: Buffer, cb: (err: Error, out: Buffer) => void): void;
+    static zlib(input: Buffer, options: Zopfli.Options, callback: (err: Error, out: Buffer) => void): void;
+    static zlib(input: Buffer, callback: (err: Error, out: Buffer) => void): void;
     static zlib(input: Buffer, options?: Zopfli.Options): Promise<Buffer>;
 
-    static compress(input: Buffer, format: Zopfli.Format, options: Zopfli.Options, cb: (err: Error, out: Buffer) => void): void;
-    static compress(input: Buffer, format: Zopfli.Format, cb: (err: Error, out: Buffer) => void): void;
-    static compress(input: Buffer, format: Zopfli.Format, options?: Zopfli.Options): Promise<Buffer>;
+    static compress(input: Buffer, format: Zopfli.Format, options: Zopfli.Options, callback: (err: Error, out: Buffer) => void): void;
+    static compress(input: Buffer, format: Zopfli.Format, callback: (err: Error, out: Buffer) => void): void;
+    static compress(input: Buffer, format: Zopfli.Format, options: Zopfli.Options): Promise<Buffer>;
+    static compress(input: Buffer): Promise<Buffer>;
 }
 
 declare namespace Zopfli {
